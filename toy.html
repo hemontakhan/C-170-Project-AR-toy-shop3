@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+  <link href="./styles.css" rel="stylesheet">
+ 
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAw3rTycrx-Pvkr1bYi1e3fVoPRSFBjtDQ",
+    authDomain: "digital-toy-store.firebaseapp.com",
+    projectId: "digital-toy-store",
+    storageBucket: "digital-toy-store.appspot.com",
+    messagingSenderId: "787303382125",
+    appId: "1:787303382125:web:026006b1dbf7bddf10d364",
+    measurementId: "G-LW11MVPL6T"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
+</head>
+ <body>
+  <a-scene id="main-scene" vr-mode-ui="enabled:false" embedded arjs="sourceType: webcam;
+   sourceWidth: 1280;sourceHeight: 960;
+   displayWidth: 1280;displayHeight: 960;
+   debugUIEnabled:false" gesture-detector shop-buttons>
+     
+   <a-entity camera></a-entity>
+
+   <div id="button-div" class='fixedBottom'></div>
+  </a-scene>
+ </body>
+</html>
